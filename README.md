@@ -15,10 +15,16 @@ config directory. You can find this directory by opening neovim and then typing:
 :h rtp
 ```
 
-Next, change into your neovim config directory and run the setup script to install
-all packages.
+The config directory will likely be `~/.config/nvim`, which is what will be used
+in the rest of this document.
+
+Change into your neovim config directory and clone this repository. Then run the
+setup script to install all packages.
 
 ```
+cd ~/.config
+git clone https://github.com/DevanTurtle7/nvim
+cd nvim
 source setup.sh
 ```
 

@@ -15,11 +15,10 @@ config directory. You can find this directory by opening neovim and then typing:
 :h rtp
 ```
 
-The config directory will likely be `~/.config/nvim`, which is what will be used
-in the rest of this document.
+The config directory will likely be `~/.config/nvim`.
 
 Change into your neovim config directory and clone this repository. Then run the
-setup script to install all packages.
+setup script to install Packer.
 
 ```
 cd ~/.config

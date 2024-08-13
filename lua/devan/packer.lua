@@ -28,6 +28,26 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('airblade/vim-gitgutter', {run = ':GitGutterEnable'})
   use('rrethy/vim-illuminate')
+  use('sidebar-nvim/sidebar.nvim')
+  use {
+      'goolord/alpha-nvim',
+      config = function ()
+          require'alpha'.setup(require'alpha.themes.dashboard'.config)
+      end
+  }
+  use {
+      "MaximilianLloyd/ascii.nvim",
+      requires = {
+          "MunifTanjim/nui.nvim"
+      }
+  }
+  use {
+      'romgrk/barbar.nvim',
+      requires = {
+          'nvim-tree/nvim-web-devicons',
+          'lewis6991/gitsigns.nvim'
+      }
+  }
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',

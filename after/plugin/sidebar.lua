@@ -1,6 +1,9 @@
 require("sidebar-nvim").setup({
     open = true,
-    sections = {"files", "git"}
+    sections = {"files", "todos", "git"},
+    files = {
+        show_hidden = true
+    }
 })
 
 vim.keymap.set("n", "<leader>f", vim.cmd.SidebarNvimFocus)

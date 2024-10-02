@@ -28,7 +28,10 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('airblade/vim-gitgutter', {run = ':GitGutterEnable'})
   use('rrethy/vim-illuminate')
-  use('devanturtle7/sidebar.nvim')
+  use{
+      'devanturtle7/sidebar.nvim',
+      branch = 'main'
+  }
   use {
       'goolord/alpha-nvim',
       config = function ()

@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('airblade/vim-gitgutter', {run = ':GitGutterEnable'})
   use('rrethy/vim-illuminate')
+  use("olimorris/persisted.nvim")
   use{
       'devanturtle7/sidebar.nvim',
       branch = 'main'

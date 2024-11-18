@@ -7,7 +7,7 @@ require("sidebar-nvim").setup({
 })
 
 vim.keymap.set("n", "<leader>f", vim.cmd.SidebarNvimFocus)
-vim.keymap.set("n", "<leader>z", vim.cmd.SidebarNvimTogge)
+vim.keymap.set("n", "<leader>z", vim.cmd.SidebarNvimToggle)
 
 -- Automatically focus on sidebar on startup
 --[[

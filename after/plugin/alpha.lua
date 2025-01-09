@@ -7,7 +7,7 @@ Icons:
  󰈞 󰊄  󰈬  
 ]]--
 
-dashboard.section.header.val = ascii.art.text.neovim.sharp
+dashboard.section.header.val = ascii.art.misc.hydra.hydra
 dashboard.section.buttons.val = {
     dashboard.button("SPC f", "  Jump to explorer"),
     dashboard.button("SPC p f", "󰈞  Find file"),

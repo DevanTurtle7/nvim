@@ -5,6 +5,9 @@ This is my neovim config.
 ## Prerequisites
 
 Ensure an up-to-date version of npm is installed.
+Additionally, you will need to ensure that [ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
+is installed (for treesitter).
+
 
 ## Setup
 

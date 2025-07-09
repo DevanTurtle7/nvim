@@ -1,6 +1,6 @@
-vim.opt.nu = true
+vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.statuscolumn = "%s%l %r "
+vim.opt.statuscolumn = "%s%{&rnu ? v:relnum : ''} %{&nu ? v:lnum : ''} "
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4

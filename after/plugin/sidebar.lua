@@ -3,7 +3,8 @@ require("sidebar-nvim").setup({
     sections = {"files", "todos", "git"},
     files = {
         show_hidden = true
-    }
+    },
+    hide_statusline = true
 })
 
 vim.keymap.set("n", "<leader>f", vim.cmd.SidebarNvimFocus)

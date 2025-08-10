@@ -2,7 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require("packer").startup(function(use)
   -- Packer can manage itself
-  use "wbthomason/packer.nvim"
+  use("wbthomason/packer.nvim")
   use("nvim-treesitter/playground")
   use("theprimeagen/harpoon")
   use("mbbill/undotree")
@@ -11,7 +11,7 @@ return require("packer").startup(function(use)
   use("chentoast/marks.nvim")
   use("airblade/vim-gitgutter", {run = ":GitGutterEnable"})
   use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
-  use{
+  use {
     "devanturtle7/sidebar.nvim",
     branch = "main"
   }

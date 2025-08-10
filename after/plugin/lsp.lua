@@ -1,56 +1,65 @@
-local lsp = require('lsp-zero')
+local lsp = require("lsp-zero")
 
---lsp.preset('recommended')
-
-require('mason').setup({})
-require('mason-lspconfig').setup({
-    ensure_installed = {
-        'cssls',
-        'eslint',
-        'html',
-        'lua_ls',
-        'perlnavigator',
-        'pyright',
-        'ts_ls',
-    },
-    handlers = {
-        lsp.default_setup,
-    },
+require("mason").setup({})
+require("mason-lspconfig").setup({
+  ensure_installed = {
+    "cssls",
+    "eslint",
+    "html",
+    "lua_ls",
+    "perlnavigator",
+    "pyright",
+    "ts_ls",
+  },
+  handlers = {
+    lsp.default_setup,
+  },
 })
 
-vim.lsp.config('lua_ls', {
+vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
       diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
+        globals = {"vim"},
       },
     },
   },
 })
 
-vim.lsp.config('pyright', {
-    settings = {
-        python = {
-            analysis = {
-                typeCheckingMode = "off",
-            }
-        }
+vim.lsp.config("pyright", {
+  settings = {
+    python = {
+      analysis = {
+        typeCheckingMode = "off",
+      }
     }
+  }
 })
 
-local cmp = require('cmp')
-require('lsp-zero').cmp_action()
+local cmp = require("cmp")
+require("lsp-zero").cmp_action()
 
 cmp.setup({
+  snippet = {
+    expand = function(args)
+      require("luasnip").lsp_expand(args.body)
+    end,
+  },
 	window = {
-		completion = cmp.config.window.bordered(),
+	  completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered()
 	},
-	mapping = cmp.mapping.preset.insert({
-	})
+  mapping = {
+    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    ["<C-j>"] = cmp.mapping.select_next_item(),
+  },
+  sources = cmp.config.sources({
+    { name = "nvim_lsp" },
+    { name = "luasnip" },
+  }, {
+    { name = "buffer" },
+  })
 })
-
 
 lsp.on_attach(function(client, bufnr)
 	local opts = {buffer = bufnr, remap = false}

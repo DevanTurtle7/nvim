@@ -1,4 +1,4 @@
-require'marks'.setup {
+require("marks").setup {
   mappings = {
     set_next = "m,",
     next = "m]",

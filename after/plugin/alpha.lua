@@ -2,7 +2,6 @@ local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 local ascii = require("ascii")
 
-
 local explorer_button = dashboard.button("SPC f", "  Jump to explorer")
 local file_button = dashboard.button("SPC p f", "󰈞  Find file")
 local word_button = dashboard.button("SPC p s", "󰈬  Find word")
@@ -21,10 +20,10 @@ Icons:
 dashboard.section.header.opts.hl = "Comment"
 dashboard.section.header.val = ascii.art.misc.hydra.hydra
 dashboard.section.buttons.val = {
-    explorer_button,
-    file_button,
-    word_button,
-    harpoon_button,
+  explorer_button,
+  file_button,
+  word_button,
+  harpoon_button,
 }
 
 alpha.setup(dashboard.opts)

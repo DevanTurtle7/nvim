@@ -1,11 +1,11 @@
 require("sidebar-nvim").setup({
-    open = true,
-    sections = {"files", "todos", "git"},
-    files = {
-        show_hidden = true,
-        ignored_paths = {"%.git$", "%.DS_Store$", "%__pycache__$"}
-    },
-    hide_statusline = true,
+  open = true,
+  sections = {"files", "todos", "git"},
+  files = {
+    show_hidden = true,
+    ignored_paths = {"%.git$", "%.DS_Store$", "%__pycache__$"}
+  },
+  hide_statusline = true,
 })
 
 vim.keymap.set("n", "<leader>f", vim.cmd.SidebarNvimFocus)

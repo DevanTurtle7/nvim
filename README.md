@@ -58,24 +58,3 @@ require'nvim-treesitter.install'.compilers = {
 ```
 
 You can change `gcc` to be any C compiler such as `clang`, `cc`, or `zig`.
-
-## Favorite Motions
-| Key(s) | Description |
-|--------|-------------|
-| `#` | Jump to previous occurrance of word under cursor |
-| `*` | Jump to next occurrance of word under cursor |
-| `^` | Move cursor to the start of the current line |
-| `$` | Move cursor to the end of the current line |
-| `{` | Jump to previous empty line |
-| `}` | Jump to next empty line |
-| `g` `g` | Jump to top of the file |
-| `G` `G` | Jump to end of the file |
-| `g` `d` | Jump to function definition |
-| `z` `z` | Center screen to cursor |
-| `[` `c` | Jump to previous git change (vim-gitgutter) |
-| `]` `c` | Go to the next recent git change (vim-gitgutter) |
-| `g` `h` `p` | View git change (vim-gitgutter) |
-| `Ctrl` `u` | Move up several lines |
-| `Ctrl` `d` | Move down several lines |
-| `Ctrl` `V` then `j`/`k` then `I` then `esc` | Visual block mode. Change the start of multiple lines |
-| `Ctrl` `V` then `j`/`k` then `x` then `esc` | Visual block mode. Delete character from multiple lines |

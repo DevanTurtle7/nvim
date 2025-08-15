@@ -9,6 +9,7 @@ return require("packer").startup(function(use)
   use("tpope/vim-fugitive")
   use("rrethy/vim-illuminate")
   use("chentoast/marks.nvim")
+  use("Vimjas/vim-python-pep8-indent")
   use("airblade/vim-gitgutter", {run = ":GitGutterEnable"})
   use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
   use {
@@ -39,6 +40,13 @@ return require("packer").startup(function(use)
 	  requires = {
       "nvim-lua/plenary.nvim"
     }
+  }
+  use {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-autopairs").setup {}
+    end
   }
   use({
 	  "nyoom-engineering/oxocarbon.nvim",

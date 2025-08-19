@@ -36,6 +36,10 @@ Finally, open up neovim and install everything with packer.
 :PackerSync
 ```
 
+### Font
+
+My preferred font for this setup is [Hack Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Hack.zip).
+
 ### Additional Steps
 
 You may want to add an alias to open neovim.

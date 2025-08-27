@@ -25,7 +25,7 @@ setup script to install Packer.
 
 ```
 cd ~/.config
-git clone https://github.com/DevanTurtle7/nvim
+git clone https://github.com/devkav/nvim
 cd nvim
 source setup.sh
 ```

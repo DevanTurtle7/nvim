@@ -11,7 +11,7 @@ return require("packer").startup(function(use)
   use("airblade/vim-gitgutter", {run = ":GitGutterEnable"})
   use("nvim-treesitter/nvim-treesitter", {run = ":TSUpdate"})
   use {
-    "devanturtle7/sidebar.nvim",
+    "devkav/sidebar.nvim",
     branch = "main"
   }
   use {
